@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Quit! Replication Package</title>
+  <meta name="description" content="Replication package companion website for 'I Quit!: Understanding Practitioner Abrupt Disengagement through Socio-Technical Factors in Open Source Software'.">
+  <meta property="og:title" content="I Quit! Replication Package">
+  <meta property="og:description" content="Data, scripts, materials, and study overview for the abrupt disengagement OSS study.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">Replication Package</div>
+        <a class="ghost-link" href="#materials">Materials</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Open Source Software · Socio-Technical Analysis</p>
+          <h1>“I Quit!”</h1>
+          <p class="subtitle">Understanding Practitioner Abrupt Disengagement through Socio-Technical Factors in Open Source Software</p>
+          <p class="lead">
+            This website summarizes the study, highlights the main empirical findings,
+            and provides direct access to the replication package for reuse and inspection.
+          </p>
+          <div class="hero-actions">
+            <a id="Fishare-link" class="button button-primary" href="h https://figshare.com/s/6d643a475481c51f5a7f " target="_blank" rel="noreferrer">Open Replication Package</a>
+            <a class="button button-secondary" href="./manuscript.pdf" target="_blank" rel="noreferrer">Read the Paper</a>
+          </div>
+          <p class="meta-note">Update the Fighsare URL in <code>index.html</code> once you send me the final link.</p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="stat-block">
+            <span class="stat-label">Projects</span>
+            <strong>6 Apache OSS projects</strong>
+          </div>
+          <div class="stat-block">
+            <span class="stat-label">Outcome</span>
+            <strong>Abrupt disengagement</strong>
+          </div>
+          <div class="stat-block">
+            <span class="stat-label">Signals studied</span>
+            <strong>Community smells and socio-technical proximity</strong>
+          </div>
+          <div class="stat-block">
+            <span class="stat-label">Data sources</span>
+            <strong>GitHub, JIRA, Apache Pony Mail</strong>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section intro">
+        <div class="section-heading">
+          <p class="section-kicker">Study at a glance</p>
+          <h2>Why this paper matters</h2>
+        </div>
+        <div class="panel">
+          <p>
+            Open-source ecosystems depend on sustained contributor participation, yet sudden and negative withdrawal remains poorly understood.
+            This study investigates whether socio-technical conditions around contributors can help explain abrupt disengagement events.
+          </p>
+          <p>
+            The analysis models disengagement as a measurable empirical outcome and tests how communication breakdowns, structural fragmentation,
+            and developer embeddedness relate to short-, medium-, and long-term risk.
+          </p>
+        </div>
+      </section>
+
+      <section class="section cards">
+        <article class="info-card">
+          <p class="section-kicker">Research questions</p>
+          <h3>RQ1</h3>
+          <p>Can abrupt disengagement be predicted using community smells?</p>
+        </article>
+        <article class="info-card">
+          <p class="section-kicker">Research questions</p>
+          <h3>RQ2</h3>
+          <p>Can abrupt disengagement be predicted by socio-technical proximity metrics?</p>
+        </article>
+        <article class="info-card">
+          <p class="section-kicker">Operationalization</p>
+          <h3>Outcome</h3>
+          <p>A contributor is considered abruptly disengaged when a negative final message is followed by at least three months of inactivity.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Method</p>
+          <h2>Research design</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-index">01</span>
+            <div>
+              <h3>Project selection</h3>
+              <p>Six Apache Software Foundation projects with public code, issues, mailing-list discussions, and long-enough development history.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-index">02</span>
+            <div>
+              <h3>Data extraction</h3>
+              <p>Artifacts collected from GitHub, JIRA, and Apache Pony Mail, then unified at developer level across 30-day windows.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-index">03</span>
+            <div>
+              <h3>Feature construction</h3>
+              <p>Community smells and socio-technical network measures derived using Kaiaulu and OSLOM-based community analysis.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-index">04</span>
+            <div>
+              <h3>Modeling</h3>
+              <p>Logistic regression models estimated over multiple temporal horizons: next month, next three months, and next year.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Dataset</p>
+          <h2>Projects analyzed</h2>
+        </div>
+        <div class="panel">
+          <div class="table-wrap">
+            <table class="projects-table">
+              <thead>
+                <tr>
+                  <th>Project name</th>
+                  <th>Analyzed artifacts</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>ApexCore</strong>
+                    <span>Stream Processing</span>
+                  </td>
+                  <td>JIRA Issues: 644<br>Email Entries: 12,650<br>GitHub Comments: 644<br>GitHub Commits: 5,847</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Ambari</strong>
+                    <span>Java Servers</span>
+                  </td>
+                  <td>JIRA Issues: 2,401<br>Email Entries: 791<br>GitHub Comments: 512<br>GitHub Commits: 32,155</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Bookkeeper</strong>
+                    <span>Log Replications</span>
+                  </td>
+                  <td>JIRA Issues: 211<br>Email Entries: 0<br>GitHub Comments: 562<br>GitHub Commits: 3,863</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Helix</strong>
+                    <span>Server Management</span>
+                  </td>
+                  <td>JIRA Issues: 250<br>Email Entries: 2,931<br>GitHub Comments: 4,175<br>GitHub Commits: 17,021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Geronimo</strong>
+                    <span>Cluster Management</span>
+                  </td>
+                  <td>JIRA Issues: 3,237<br>Email Entries: 38,456<br>GitHub Comments: 0<br>GitHub Commits: 91,424</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Thrift</strong>
+                    <span>Cross-Language RPC</span>
+                  </td>
+                  <td>JIRA Issues: 1,132<br>Email Entries: 5,501<br>GitHub Comments: 3,797<br>GitHub Commits: 4,584</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Main findings</p>
+          <h2>What the paper shows</h2>
+        </div>
+        <div class="findings-grid">
+          <article class="finding">
+            <h3>Isolation matters fast</h3>
+            <p>Lone Wolf and Radio Silence are associated with higher short-term risk of abrupt disengagement.</p>
+          </article>
+          <article class="finding">
+            <h3>Structural silos act slowly</h3>
+            <p>Organizational Silo becomes more visible as a long-term risk factor rather than an immediate trigger.</p>
+          </article>
+          <article class="finding">
+            <h3>Embeddedness can protect</h3>
+            <p>Higher socio-technical alignment and lower communication distance reduce early exit risk.</p>
+          </article>
+          <article class="finding">
+            <h3>Too much interaction can backfire</h3>
+            <p>Dense communication can become overload, suggesting that not all collaboration intensity is beneficial.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="materials" class="section materials">
+        <div class="section-heading">
+          <p class="section-kicker">Package contents</p>
+          <h2>Replication materials</h2>
+        </div>
+        <div class="panel split">
+          <div>
+            <p>The replication package is intended to provide the core artifacts needed to inspect, reuse, and reproduce the study.</p>
+            <ul class="clean-list">
+              <li>Raw or curated data snapshots</li>
+              <li>Analysis scripts and modeling code</li>
+              <li>Documentation for the workflow</li>
+              <li>Supplementary materials and metadata</li>
+            </ul>
+          </div>
+          <div class="cta-card">
+            <p class="cta-label">Archive link</p>
+            <a id="Fighsare-link-card" class="button button-primary button-wide" href="https://example.org/replace-with-Fighsare" target="_blank" rel="noreferrer">Go to Fighsare</a>
+            <p class="small-note">Replace the placeholder URL with the final Fighsare record before publishing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Citation</p>
+          <h2>How to reference this work</h2>
+        </div>
+        <div class="panel">
+          <p class="citation">
+            Mulder, W., Di Penta, M., Giordano, G., Kazman, R., Palomba, F., Pontillo, V., and Tamburri, D. A.
+            <em>“I Quit!”: Understanding Practitioner Abrupt Disengagement through Socio-Technical Factors in Open Source Software.</em>
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
